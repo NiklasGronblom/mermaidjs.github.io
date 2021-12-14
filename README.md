@@ -16,14 +16,14 @@ type, state diagrams.
 
 ## Special note regarding version 8.2
 
-In version 8.2 a security improvement was introduced. A securityLevel configuration was introduced wich sets the level of trust to be used on the parsed diagrams.
+In version 8.2 a security improvement was introduced. A securityLevel configuration was introduced which sets the level of trust to be used on the parsed diagrams.
 
 * **true**: (default) tags in text are encoded, click functionality is disabled
 * false: tags in text are allowed, click functionality is enabledClosed issues:
 
-⚠️ **Note** : This changes the default behaviour of mermaid so that after upgrade to 8.2, if the securityLevel is not configured, tags in flowcharts are encoded as tags and clicking is prohibited.
+⚠️ **Note** : This changes the default behavior of mermaid so that after upgrade to 8.2, if the securityLevel is not configured, tags in flowcharts are encoded as tags and clicking is prohibited.
 
-If your application is taking resposibility for the diagram source security you can set the securityLevel accordingly. By doing this clicks and tags are again allowed.
+If your application is taking responsibility for the diagram source security you can set the securityLevel accordingly. By doing this clicks and tags are again allowed.
 
 ```javascript
     mermaidAPI.initialize({
@@ -41,7 +41,7 @@ Ever wanted to simplify documentation and avoid heavy tools like Visio when expl
 
 This is why mermaid was born, a simple markdown-like script language for generating charts from text via javascript.
 
-**Mermaid was nomiated and won the JS Open Source Awards (2019) in the catory The most existing use of technology!!! Thanks to all involved, people committing pull requests, people answering questions and special thanks to Tyler Long who is helping me maintain the project.**
+**Mermaid was nominated and won the JS Open Source Awards (2019) in the category The most existing use of technology!!! Thanks to all involved, people committing pull requests, people answering questions and special thanks to Tyler Long who is helping me maintain the project.**
 
 ### Flowchart
 
@@ -78,7 +78,7 @@ sequenceDiagram
 ```
 gantt
 dateFormat  YYYY-MM-DD
-title Adding GANTT diagram to mermaid
+title Adding Gantt diagram to mermaid
 excludes weekdays 2014-01-10
 
 section A section
@@ -229,7 +229,7 @@ Command above generates files into the `dist` folder and publishes them to npmjs
 
 Many thanks to the [d3](http://d3js.org/) and [dagre-d3](https://github.com/cpettitt/dagre-d3) projects for providing the graphical layout and drawing libraries!
 
-Thanks also to the [js-sequence-diagram](http://bramp.github.io/js-sequence-diagrams) project for usage of the grammar for the sequence diagrams. Thanks to Jessica Peter for inspiration and starting point for gantt rendering.
+Thanks also to the [js-sequence-diagram](http://bramp.github.io/js-sequence-diagrams) project for usage of the grammar for the sequence diagrams. Thanks to Jessica Peter for inspiration and starting point for Gantt rendering.
 
 *Mermaid was created by Knut Sveidqvist for easier documentation.*
 

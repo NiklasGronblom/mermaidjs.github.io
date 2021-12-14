@@ -12,7 +12,6 @@ sequenceDiagram
     Alice->John: Yes... John, how are you?
 ```
 
-
 ```mermaid
 sequenceDiagram
     Alice ->> Bob: Hello Bob, how are you?
@@ -25,7 +24,6 @@ sequenceDiagram
     Alice->John: Yes... John, how are you?
 ```
 
-
 ## Basic flowchart
 
 ```mermaid
@@ -35,7 +33,6 @@ graph LR
     B --> D{Rhombus}
     C --> D
 ```
-
 
 ## Larger flowchart with some styling
 
@@ -63,7 +60,6 @@ graph TB
      class di orange
 ```
 
-
 ## Loops, alt and opt
 
 ```mermaid
@@ -81,7 +77,6 @@ sequenceDiagram
         end
     end
 ```
-
 
 ## Message to self in loop
 

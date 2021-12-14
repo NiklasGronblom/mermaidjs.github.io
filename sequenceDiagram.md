@@ -405,5 +405,5 @@ mermaid.sequenceConfig = {
 Param | Description | Default value
 --- | --- | ---
 mirrorActor | Turns on/off the rendering of actors below the diagram as well as above it | false
-bottomMarginAdj | Adjusts how far down the graph ended. Wide borders styles with css could generate unwantewd clipping which is why this config param exists. | 1
+bottomMarginAdj | Adjusts how far down the graph ended. Wide borders styles with css could generate unwanted clipping which is why this config param exists. | 1
 

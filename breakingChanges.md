@@ -27,23 +27,23 @@ mermaid.initialize({
 In old versions you need to add CSS file to your HTML:
 
 ```html
-<link rel="stylesheet" href="mermaid.min.css">
+<link rel="stylesheet" href="mermaid.min.css" />
 ```
 
 or
 
 ```html
-<link rel="stylesheet" href="mermaid.forest.min.css">
+<link rel="stylesheet" href="mermaid.forest.min.css" />
 ```
 
-Now it is not needed to do so. And there are no more CSS files in distrubtion files.
+Now it is not needed to do so. And there are no more CSS files in distribution files.
 
 You just
 
 ```javascript
 mermaid.initialize({
-    theme: 'forest'
-})
+  theme: "forest",
+});
 ```
 
 and it works like a charm.

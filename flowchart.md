@@ -10,6 +10,7 @@ This declares a graph oriented from top to bottom (`TD` or `TB`).
 graph TD
     Start --> Stop
 ```
+
 ```mermaid
 graph TD
     Start --> Stop
@@ -21,6 +22,7 @@ This declares a graph oriented from left to right (`LR`).
 graph LR
     Start --> Stop
 ```
+
 ```mermaid
 graph LR
     Start --> Stop
@@ -28,13 +30,12 @@ graph LR
 
 Possible directions are:
 
-* TB - top bottom
-* BT - bottom top
-* RL - right left
-* LR - left right
+- TB - top bottom
+- BT - bottom top
+- RL - right left
+- LR - left right
 
-* TD - same as TB
-
+- TD - same as TB
 
 ## Nodes & shapes
 
@@ -49,6 +50,7 @@ graph LR
 graph LR
     id
 ```
+
 Note that the id is what is displayed in the box.
 
 ### A node with text
@@ -61,11 +63,11 @@ one previously defined will be used when rendering the box.
 graph LR
     id1[This is the text in the box]
 ```
+
 ```mermaid
 graph LR
     id1[This is the text in the box]
 ```
-
 
 ### A node with round edges
 
@@ -73,6 +75,7 @@ graph LR
 graph LR
     id1(This is the text in the box)
 ```
+
 ```mermaid
 graph LR
     id1(This is the text in the box)
@@ -84,22 +87,25 @@ graph LR
 graph LR
     id1((This is the text in the circle))
 ```
+
 ```mermaid
 graph LR
     id1((This is the text in the circle))
 ```
 
-### A node in an asymetric shape
+### A node in an asymmetric shape
 
 ```
 graph LR
     id1>This is the text in the box]
 ```
+
 ```mermaid
 graph LR
     id1>This is the text in the box]
 ```
-Currently only the shape above is possible and not its mirror. *This might change with future releases.*
+
+Currently only the shape above is possible and not its mirror. _This might change with future releases._
 
 ### A node (rhombus)
 
@@ -107,6 +113,7 @@ Currently only the shape above is possible and not its mirror. *This might chang
 graph LR
     id1{This is the text in the box}
 ```
+
 ```mermaid
 graph LR
     id1{This is the text in the box}
@@ -118,6 +125,7 @@ graph LR
 graph LR
     id1{{This is the text in the box}}
 ```
+
 ```mermaid
 graph LR
     id1{{This is the text in the box}}
@@ -129,16 +137,19 @@ graph LR
 graph TD
     A[/Christmas\]
 ```
+
 ```mermaid
 graph TD
     A[/Christmas\]
 ```
+
 ### Trapezoid alt
 
 ```
 graph TD
     B[\Go shopping/]
 ```
+
 ```mermaid
 graph TD
     B[\Go shopping/]
@@ -154,6 +165,7 @@ Nodes can be connected with links/edges. It is possible to have different types 
 graph LR
     A-->B
 ```
+
 ```mermaid
 graph LR
     A-->B
@@ -165,6 +177,7 @@ graph LR
 graph LR
     A --- B
 ```
+
 ```mermaid
 graph LR
     A --- B
@@ -176,6 +189,7 @@ graph LR
 graph LR
     A-- This is the text ---B
 ```
+
 ```mermaid
 graph LR
     A-- This is the text ---B
@@ -187,6 +201,7 @@ or
 graph LR
     A---|This is the text|B
 ```
+
 ```mermaid
 graph LR
     A---|This is the text|B
@@ -198,6 +213,7 @@ graph LR
 graph LR
     A-->|text|B
 ```
+
 ```mermaid
 graph LR
     A-->|text|B
@@ -209,6 +225,7 @@ or
 graph LR
     A-- text -->B
 ```
+
 ```mermaid
 graph LR
     A-- text -->B
@@ -220,6 +237,7 @@ graph LR
 graph LR;
    A-.->B;
 ```
+
 ```mermaid
 graph LR;
    A-.->B;
@@ -231,6 +249,7 @@ graph LR;
 graph LR
    A-. text .-> B
 ```
+
 ```mermaid
 graph LR
    A-. text .-> B
@@ -242,6 +261,7 @@ graph LR
 graph LR
    A ==> B
 ```
+
 ```mermaid
 graph LR
    A ==> B
@@ -253,6 +273,7 @@ graph LR
 graph LR
    A == text ==> B
 ```
+
 ```mermaid
 graph LR
    A == text ==> B
@@ -261,15 +282,16 @@ graph LR
 ### Chaining of links
 
 It is possible declare many links in the same line as per below:
+
 ```
-graph LR
-   A -- text --> B -- text2 --> C
-```
-```mermaid
 graph LR
    A -- text --> B -- text2 --> C
 ```
 
+```mermaid
+graph LR
+   A -- text --> B -- text2 --> C
+```
 
 ## Special characters that break syntax
 
@@ -279,6 +301,7 @@ It is possible to put text within quotes in order to render more troublesome cha
 graph LR
     id1["This is the (text) in the box"]
 ```
+
 ```mermaid
 graph LR
     id1["This is the (text) in the box"]
@@ -286,12 +309,13 @@ graph LR
 
 ### Entity codes to escape characters
 
-It is possible to escape characters using the syntax examplified here.
+It is possible to escape characters using the syntax exemplified here.
 
 ```
     graph LR
         A["A double quote:#quot;"] -->B["A dec char:#9829;"]
 ```
+
 ```mermaid
     graph LR
         A["A double quote:#quot;"] -->B["A dec char:#9829;"]
@@ -319,7 +343,8 @@ graph TB
     subgraph three
     c1-->c2
     end
- ```
+```
+
 ```mermaid
 graph TB
     c1-->a2
@@ -332,8 +357,7 @@ graph TB
     subgraph three
     c1-->c2
     end
- ```
-
+```
 
 ## Interaction
 
@@ -343,8 +367,8 @@ It is possible to bind a click event to a node, the click can lead to either a j
 click nodeId callback
 ```
 
-* nodeId is the id of the node
-* callback is the name of a javascript function defined on the page displaying the graph, the function will be called with the nodeId as parameter.
+- nodeId is the id of the node
+- callback is the name of a javascript function defined on the page displaying the graph, the function will be called with the nodeId as parameter.
 
 Examples of tooltip usage below:
 
@@ -371,9 +395,11 @@ graph LR;
     click A callback "Tooltip"
     click B "http://www.github.com" "This is a link"
 ```
+
 > **Success** The tooltip functionality and the ability to link to urls are available from version 0.5.2.
 
 Beginners tip, a full example using interactive links in a html context:
+
 ```
 <body>
   <div class="mermaid">
@@ -415,7 +441,6 @@ defined in the linkStyle statement will belong to the fourth link in the graph:
 linkStyle 3 stroke:#ff3,stroke-width:4px;
 ```
 
-
 ### Styling a node
 
 It is possible to apply specific styles such as a thicker border or a different background color to a node.
@@ -426,6 +451,7 @@ graph LR
     style id1 fill:#f9f,stroke:#333,stroke-width:4px
     style id2 fill:#ccf,stroke:#f66,stroke-width:2px,stroke-dasharray: 5, 5
 ```
+
 ```mermaid
 graph LR
     id1(Start)-->id2(Stop)
@@ -433,14 +459,12 @@ graph LR
     style id2 fill:#ccf,stroke:#f66,stroke-width:2px,stroke-dasharray: 5, 5
 ```
 
-
 #### Classes
 
 More convenient then defining the style every time is to define a class of styles and attach this class to the nodes that
 should have a different look.
 
 a class definition looks like the example below:
-
 
 ```
     classDef className fill:#f9f,stroke:#333,stroke-width:4px;
@@ -458,7 +482,6 @@ It is also possible to attach a class to a list of nodes in one statement:
     class nodeId1,nodeId2 className;
 ```
 
-
 ### Css classes
 
 It is also possible to predefine classes in css styles that can be applied from the graph definition as in the example
@@ -468,11 +491,11 @@ below:
 
 ```html
 <style>
-    .cssClass > rect{
-        fill:#FF0000;
-        stroke:#FFFF00;
-        stroke-width:4px;
-    }
+  .cssClass > rect {
+    fill: #ff0000;
+    stroke: #ffff00;
+    stroke-width: 4px;
+  }
 </style>
 ```
 
@@ -484,13 +507,13 @@ graph LR;
     B-->D;
     class A cssClass;
 ```
+
 ```mermaid
 graph LR;
     A-->B[AAA<span>BBB</span>];
     B-->D;
     class A cssClass;
 ```
-
 
 ### Default class
 
@@ -500,12 +523,11 @@ If a class is named default it will be assigned to all classes without specific 
     classDef default fill:#f9f,stroke:#333,stroke-width:4px;
 ```
 
-
 ## Basic support for fontawesome
 
 It is possible to add icons from fontawesome.
 
-The icons are acessed via the syntax fa:#icon class name#.
+The icons are accessed via the syntax fa:#icon class name#.
 
 ```
 graph TD
@@ -514,6 +536,7 @@ graph TD
     B-->D(fa:fa-spinner);
     B-->E(A fa:fa-camera-retro perhaps?);
 ```
+
 ```mermaid
 graph TD
     B["fa:fa-twitter for peace"]
@@ -522,12 +545,11 @@ graph TD
     B-->E(A fa:fa-camera-retro perhaps?);
 ```
 
-
 ## Graph declarations with spaces between vertices and link and without semicolon
 
-* In graph declarations, the statements also can now end without a semicolon. After release 0.2.16, ending a graph statement with semicolon is just optional. So the below graph declaration is also valid along with the old declarations of the graph.
+- In graph declarations, the statements also can now end without a semicolon. After release 0.2.16, ending a graph statement with semicolon is just optional. So the below graph declaration is also valid along with the old declarations of the graph.
 
-* A single space is allowed between vertices and the link. However there should not be any space between a vertex and its text and a link and its text. The old syntax of graph declaration will also work and hence this new feature is optional and is introduce to improve readability.
+- A single space is allowed between vertices and the link. However there should not be any space between a vertex and its text and a link and its text. The old syntax of graph declaration will also work and hence this new feature is optional and is introduce to improve readability.
 
 Below is the new declaration of the graph edges which is also valid along with the old declaration of the graph edges.
 
@@ -546,7 +568,6 @@ graph LR
     C -->|One| D[Result one]
     C -->|Two| E[Result two]
 ```
-
 
 ## Configuration...
 

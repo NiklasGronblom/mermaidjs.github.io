@@ -31,7 +31,7 @@ gantt
 ```
 gantt
        dateFormat  YYYY-MM-DD
-       title Adding GANTT diagram functionality to mermaid
+       title Adding Gantt diagram functionality to mermaid
 
        section A section
        Completed task            :done,    des1, 2014-01-06,2014-01-08
@@ -48,7 +48,7 @@ gantt
        Add to mermaid                      :1d
 
        section Documentation
-       Describe gantt syntax               :active, a1, after des1, 3d
+       Describe Gantt syntax               :active, a1, after des1, 3d
        Add gantt diagram to demo page      :after a1  , 20h
        Add another diagram to demo page    :doc1, after a1  , 48h
 
@@ -60,7 +60,7 @@ gantt
 ```mermaid
 gantt
        dateFormat  YYYY-MM-DD
-       title Adding GANTT diagram functionality to mermaid
+       title Adding Gantt diagram functionality to mermaid
 
        section A section
        Completed task            :done,    des1, 2014-01-06,2014-01-08
@@ -265,9 +265,9 @@ mermaid.ganttConfig = {
 }
 ```
 
-### Possible configration params:
+### Possible configuration params:
 
-Param | Descriotion | Default value
+Param | Description | Default value
 --- | --- | ---
 mirrorActor|Turns on/off the rendering of actors below the diagram as well as above it|false
-bottomMarginAdj|Adjusts how far down the graph ended. Wide borders styles with css could generate unwantewd clipping which is why this config param exists.|1
+bottomMarginAdj|Adjusts how far down the graph ended. Wide borders styles with css could generate unwanted clipping which is why this config param exists.|1

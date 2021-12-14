@@ -15,6 +15,7 @@ stateDiagram
     Moving --> Crash
     Crash --> [*]
 ```
+
 ```mermaid
 stateDiagram
     [*] --> Still
@@ -25,6 +26,7 @@ stateDiagram
     Moving --> Crash
     Crash --> [*]
 ```
+
 In state diagrams systems are described in terms of its states and how the systems state can change to another state via a transitions. The example diagram above shows three states **Still**, **Moving** and **Crash**. You start in the state of Still. From Still you can change the state to Moving. In Moving you can change the state either back to Still or to Crash. There is no transition from Still to Crash.
 
 ## States
@@ -35,31 +37,35 @@ A state can be declares in multiple ways. The simplest way is to define a state 
 stateDiagram
     s1
 ```
+
 ```mermaid
 stateDiagram
     s1
 ```
 
 Another way is by using the state keyword with a description as per below:
+
 ```
 stateDiagram
-    state "This ia state decription" as s2
+    state "This ia state description" as s2
 ```
+
 ```mermaid
 stateDiagram
-    state "This ia state decription" as s2
+    state "This ia state description" as s2
 ```
 
 Another way to define a state with a description is to define the state id followed by a colon and the description:
+
 ```
 stateDiagram
-    s2 : This ia state decription
-```
-```mermaid
-stateDiagram
-    s2 : This ia state decription
+    s2 : This ia state description
 ```
 
+```mermaid
+stateDiagram
+    s2 : This ia state description
+```
 
 ## Transitions
 
@@ -72,6 +78,7 @@ from the transition. You can later add descriptions to states defined this way.
 stateDiagram
     s1 --> s2
 ```
+
 ```mermaid
 stateDiagram
     s1 --> s2
@@ -83,6 +90,7 @@ It is possible to add text to a transition. To describe what it represents.
 stateDiagram
     s1 --> s2: A transition
 ```
+
 ```mermaid
 stateDiagram
     s1 --> s2: A transition
@@ -97,19 +105,19 @@ stateDiagram
     [*] --> s1
     s1 --> [*]
 ```
+
 ```mermaid
 stateDiagram
     [*] --> s1
     s1 --> [*]
 ```
 
-
 ## Composit states
 
 In a real world use of state diagrams you often end up with diagrams that are multi-dimensional as one state can
-have several internal states. These are called composit states in this terminology.
+have several internal states. These are called composite states in this terminology.
 
-In order to define a composit state you need to use the state keyword followed by and id and the body of the composit state between {}. See the example below:
+In order to define a composite state you need to use the state keyword followed by and id and the body of the composite state between {}. See the example below:
 
 ```
 stateDiagram
@@ -119,6 +127,7 @@ stateDiagram
         second --> [*]
     }
 ```
+
 ```mermaid
 stateDiagram
     [*] --> First
@@ -148,6 +157,7 @@ stateDiagram
         }
     }
 ```
+
 ```mermaid
 stateDiagram
     [*] --> First
@@ -166,7 +176,7 @@ stateDiagram
     }
 ```
 
-You can also define transitions also between composit states:
+You can also define transitions also between composite states:
 
 ```
 stateDiagram
@@ -187,6 +197,7 @@ stateDiagram
         thi --> [*]
     }
 ```
+
 ```mermaid
 stateDiagram
     [*] --> First
@@ -207,7 +218,7 @@ stateDiagram
     }
 ```
 
-*You can not define transitions between internal states belonging to different composit states*
+_You can not define transitions between internal states belonging to different composit states_
 
 ## Forks
 
@@ -226,6 +237,7 @@ It is possible to specify a fork in the diagram using &lt;&lt;fork&gt;&gt; &lt;&
       join_state --> State4
       State4 --> [*]
 ```
+
 ```mermaid
    stateDiagram
     state fork_state <<fork>>
@@ -245,7 +257,7 @@ It is possible to specify a fork in the diagram using &lt;&lt;fork&gt;&gt; &lt;&
 
 Sometimes nothing says it better then a Post-it note. That is also the case in state diagrams.
 
-Here you can choose to put the note to the *right of* or to the *left of* a node.
+Here you can choose to put the note to the _right of_ or to the _left of_ a node.
 
 ```
     stateDiagram
@@ -257,6 +269,7 @@ Here you can choose to put the note to the *right of* or to the *left of* a node
         State1 --> State2
         note left of State2 : This is the note to the left.
 ```
+
 ```mermaid
     stateDiagram
     State1: The state with a note
@@ -272,6 +285,7 @@ Here you can choose to put the note to the *right of* or to the *left of* a node
 ## Concurrency
 
 As in plantUml you can specify concurrency using the -- symbol.
+
 ```
     stateDiagram
         [*] --> Active
@@ -290,7 +304,6 @@ As in plantUml you can specify concurrency using the -- symbol.
             ScrollLockOn --> ScrollLockOff : EvCapsLockPressed
         }
 ```
-
 
 ```mermaid
     stateDiagram
@@ -313,4 +326,4 @@ As in plantUml you can specify concurrency using the -- symbol.
 
 ## Styling
 
-Styling of the a state diagram is done by defining a number of css classes.  During rendering these classes are extracted from the file located at src/themes/state.scss
+Styling of the a state diagram is done by defining a number of css classes. During rendering these classes are extracted from the file located at src/themes/state.scss

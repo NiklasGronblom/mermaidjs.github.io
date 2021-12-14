@@ -22,7 +22,7 @@ pie title Pets adopted by volunteers
 
 ```
 pie
-    "DataKey1" : Positive numeric value (upto two decimal places)
+    "DataKey1" : Positive numeric value (up to two decimal places)
     "Calcium" : 42.96
     "Potassium" : 50.05
     "Magnesium" : 10.01
