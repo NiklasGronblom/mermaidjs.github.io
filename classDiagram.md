@@ -243,7 +243,7 @@ The different cardinality options are :
 - `0..n`        zero to n {where n>1}
 - `1..n`        one to n {where n>1}
 
-Cardinality can be easily defined by placing cardinality text within qoutes `"` before(optional) and after(optional) a given arrow.
+Cardinality can be easily defined by placing cardinality text within quotes `"` before(optional) and after(optional) a given arrow.
 ```
 [classA] "cardinality1" [Arrow] "cardinality2" [ClassB]:LabelText
 ```
